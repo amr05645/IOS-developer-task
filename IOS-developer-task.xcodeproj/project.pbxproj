@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		5BC0A3192776325A004468C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0A3182776325A004468C7 /* AppDelegate.swift */; };
 		5BC0A31B2776325A004468C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0A31A2776325A004468C7 /* SceneDelegate.swift */; };
-		5BC0A31D2776325A004468C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0A31C2776325A004468C7 /* ViewController.swift */; };
-		5BC0A3202776325A004468C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC0A31E2776325A004468C7 /* Main.storyboard */; };
 		5BC0A32227763263004468C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC0A32127763263004468C7 /* Assets.xcassets */; };
 		5BC0A32527763263004468C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC0A32327763263004468C7 /* LaunchScreen.storyboard */; };
+		5BE90E8B277639B90003A649 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE90E89277639B90003A649 /* HomeVC.swift */; };
+		5BE90E8C277639B90003A649 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE90E8A277639B90003A649 /* HomeVC.xib */; };
 		99BE3CD1EECC764E9C50691C /* Pods_IOS_developer_task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31BDE35193015DF45915EC30 /* Pods_IOS_developer_task.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +23,11 @@
 		5BC0A3152776325A004468C7 /* IOS-developer-task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-developer-task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC0A3182776325A004468C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BC0A31A2776325A004468C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BC0A31C2776325A004468C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5BC0A31F2776325A004468C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BC0A32127763263004468C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BC0A32427763263004468C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BC0A32627763263004468C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BE90E89277639B90003A649 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		5BE90E8A277639B90003A649 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,15 +71,39 @@
 		5BC0A3172776325A004468C7 /* IOS-developer-task */ = {
 			isa = PBXGroup;
 			children = (
+				5BE90E872776395C0003A649 /* Screens */,
+				5BE90E84277637910003A649 /* Support Files */,
+			);
+			path = "IOS-developer-task";
+			sourceTree = "<group>";
+		};
+		5BE90E84277637910003A649 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
 				5BC0A3182776325A004468C7 /* AppDelegate.swift */,
 				5BC0A31A2776325A004468C7 /* SceneDelegate.swift */,
-				5BC0A31C2776325A004468C7 /* ViewController.swift */,
-				5BC0A31E2776325A004468C7 /* Main.storyboard */,
 				5BC0A32127763263004468C7 /* Assets.xcassets */,
 				5BC0A32327763263004468C7 /* LaunchScreen.storyboard */,
 				5BC0A32627763263004468C7 /* Info.plist */,
 			);
-			path = "IOS-developer-task";
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		5BE90E872776395C0003A649 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5BE90E88277639850003A649 /* Home Screen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5BE90E88277639850003A649 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5BE90E89277639B90003A649 /* HomeVC.swift */,
+				5BE90E8A277639B90003A649 /* HomeVC.xib */,
+			);
+			path = "Home Screen";
 			sourceTree = "<group>";
 		};
 		7FFE7AAE764C708700B72433 /* Pods */ = {
@@ -88,7 +112,6 @@
 				2FFF534B33D9A12980F4EA8E /* Pods-IOS-developer-task.debug.xcconfig */,
 				22A40047B5415A0BA68098F8 /* Pods-IOS-developer-task.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,8 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC0A32527763263004468C7 /* LaunchScreen.storyboard in Resources */,
+				5BE90E8C277639B90003A649 /* HomeVC.xib in Resources */,
 				5BC0A32227763263004468C7 /* Assets.xcassets in Resources */,
-				5BC0A3202776325A004468C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC0A31D2776325A004468C7 /* ViewController.swift in Sources */,
+				5BE90E8B277639B90003A649 /* HomeVC.swift in Sources */,
 				5BC0A3192776325A004468C7 /* AppDelegate.swift in Sources */,
 				5BC0A31B2776325A004468C7 /* SceneDelegate.swift in Sources */,
 			);
@@ -197,14 +220,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5BC0A31E2776325A004468C7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BC0A31F2776325A004468C7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5BC0A32327763263004468C7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -267,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -322,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -340,7 +355,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WSH653UKSN;
-				INFOPLIST_FILE = "IOS-developer-task/Info.plist";
+				INFOPLIST_FILE = "IOS-developer-task/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,7 +376,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WSH653UKSN;
-				INFOPLIST_FILE = "IOS-developer-task/Info.plist";
+				INFOPLIST_FILE = "IOS-developer-task/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
