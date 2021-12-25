@@ -36,7 +36,7 @@ struct Show: Codable {
     var summary: String?
     var updated: Int?
     var links: Links?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, url, name, type, language, genres, status, runtime, averageRuntime, premiered, ended, officialSite, schedule, rating, weight, network, webChannel, dvdCountry, externals, image, summary, updated
         case links = "_links"
@@ -62,7 +62,7 @@ enum Language: String, Codable {
 // MARK: - Links
 struct Links: Codable {
     var linksSelf, previousepisode: Previousepisode?
-
+    
     enum CodingKeys: String, CodingKey {
         case linksSelf = "self"
         case previousepisode

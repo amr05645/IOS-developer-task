@@ -9,24 +9,15 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell, ReusableView {
     
+    // MARK:- Outlets
     @IBOutlet weak var showImg: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var rateLbl: UILabel!
     @IBOutlet weak var runTimeLbl: UILabel!
     @IBOutlet weak var linkLbl: UILabel!
     @IBOutlet weak var premieredLbl: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    // MARK:- Methods
     func configure(show: PostDetail?){
         nameLbl.text = show?.show?.name ?? ""
         rateLbl.text = "\(show?.show?.rating?.average ?? 0)"

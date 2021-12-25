@@ -9,10 +9,10 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    let netWorkManager = NetworkManager()
-    var currentIndex: Int?
+    // MARK:- Properties
+    private let netWorkManager = NetworkManager()
     
-    var postDetails: PostDetails? {
+    private var postDetails: PostDetails? {
         didSet {
             DispatchQueue.main.async {
                 self.homeTableView.reloadData()
@@ -20,8 +20,10 @@ class HomeVC: UIViewController {
         }
     }
     
+    // MARK:- OutLets
     @IBOutlet weak var homeTableView: UITableView!
     
+    // MARK:- LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Constants.viewControllersTitels.home
@@ -31,12 +33,13 @@ class HomeVC: UIViewController {
         register()
     }
     
+    // MARK:- Methods
     private func register() {
         homeTableView.register(UINib(nibName: HomeTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: HomeTableViewCell.reuseIdentifier)
     }
-    
 }
 
+// MARK:- TableViewDelegate, TableViewDataSource
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,14 +55,13 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailsVC()
-        currentIndex = indexPath.row
         vc.postDetail = postDetails?[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
-        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
 
+// MARK:- extension For Method
 extension HomeVC {
     func getData() {
         netWorkManager.getData { (result) in
@@ -67,10 +69,10 @@ extension HomeVC {
             case .success(let postDetails):
                 self.postDetails = postDetails
             case .failure(let error):
-               print(error)
+                print(error)
             }
         }
     }
 }
-    
+
 

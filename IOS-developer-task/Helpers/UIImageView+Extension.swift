@@ -7,7 +7,7 @@
 
 import UIKit
 
-let imageCache = NSCache<AnyObject, AnyObject>()
+fileprivate let imageCache = NSCache<AnyObject, AnyObject>()
 
 extension UIImageView {
     func showImage(url: String?) {
