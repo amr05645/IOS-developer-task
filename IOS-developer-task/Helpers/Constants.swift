@@ -16,4 +16,5 @@ struct Constants {
 struct ViewControllersTitles {
     
     var home: String {"Home"}
+    var showDetails: String {"Show Details"}
 }

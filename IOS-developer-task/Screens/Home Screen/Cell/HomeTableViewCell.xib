@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -84,7 +83,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="link" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JEt-Gz-c5D">
                                                 <rect key="frame" x="25" y="0.0" width="364" height="68.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -110,7 +109,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1615757783" green="0.56031829119999998" blue="0.29827323369999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DWD-qP-lgJ" firstAttribute="top" secondItem="9FM-Qt-4bd" secondAttribute="top" id="Bnj-uj-UIG"/>
                             <constraint firstItem="9FM-Qt-4bd" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DWD-qP-lgJ" secondAttribute="bottom" id="PYJ-d5-DeY"/>
@@ -131,6 +130,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.1615757783" green="0.56031829119999998" blue="0.29827323369999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="linkLbl" destination="JEt-Gz-c5D" id="xEW-yl-eBY"/>
                 <outlet property="nameLbl" destination="nCh-1Q-jKr" id="2sn-ni-pyg"/>
@@ -147,8 +147,5 @@
         <image name="star" width="170.5" height="170.5"/>
         <image name="stopwatch" width="170.5" height="170.5"/>
         <image name="world-wide-web" width="170.5" height="170.5"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

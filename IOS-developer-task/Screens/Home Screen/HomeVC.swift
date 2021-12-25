@@ -10,6 +10,7 @@ import UIKit
 class HomeVC: UIViewController {
     
     let netWorkManager = NetworkManager()
+    var currentIndex: Int?
     
     var postDetails: PostDetails? {
         didSet {
@@ -47,6 +48,14 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         let shows = postDetails?[indexPath.row]
         cell.configure(show: shows)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailsVC()
+        currentIndex = indexPath.row
+        vc.postDetail = postDetails?[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

@@ -30,7 +30,7 @@ class HomeTableViewCell: UITableViewCell, ReusableView {
     func configure(show: PostDetail?){
         nameLbl.text = show?.show?.name ?? ""
         rateLbl.text = "\(show?.show?.rating?.average ?? 0)"
-        runTimeLbl.text = "\(show?.show?.runtime ?? 0)"
+        runTimeLbl.text = "\(show?.show?.runtime ?? 0) min"
         linkLbl.text = "\(show?.show?.links?.linksSelf?.href ?? "")"
         premieredLbl.text = show?.show?.premiered ?? ""
         showImg.showImage(url: show?.show?.image?.original)
