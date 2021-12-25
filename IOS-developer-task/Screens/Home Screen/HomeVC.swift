@@ -9,6 +9,16 @@ import UIKit
 
 class HomeVC: UIViewController {
     
+    let netWorkManager = NetworkManager()
+    
+    var postDetails: PostDetails? {
+        didSet {
+            DispatchQueue.main.async {
+                self.homeTableView.reloadData()
+            }
+        }
+    }
+    
     @IBOutlet weak var homeTableView: UITableView!
     
     override func viewDidLoad() {
@@ -16,6 +26,7 @@ class HomeVC: UIViewController {
         title = Constants.viewControllersTitels.home
         homeTableView.delegate = self
         homeTableView.dataSource = self
+        getData()
         register()
     }
     
@@ -28,14 +39,29 @@ class HomeVC: UIViewController {
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return postDetails?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.reuseIdentifier, for: indexPath) as! HomeTableViewCell
+        let shows = postDetails?[indexPath.row]
+        cell.configure(show: shows)
         return cell
     }
     
+}
+
+extension HomeVC {
+    func getData() {
+        netWorkManager.getData { (result) in
+            switch result {
+            case .success(let postDetails):
+                self.postDetails = postDetails
+            case .failure(let error):
+               print(error)
+            }
+        }
+    }
 }
     
 
